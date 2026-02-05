@@ -1,0 +1,291 @@
+@import url('https://fonts.cdnfonts.com/css/kristen-itc');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+body>* {
+    background: #000;
+}
+
+body#thanks {
+    background: #000;
+}
+
+p,
+figcaption,
+li,
+a {
+    font-family: 'Kristen ITC', sans-serif;
+}
+
+.foto-container img {
+    height: 400px;
+    /* kies je hoogte */
+    object-fit: cover;
+    /* zorgt dat de foto mooi bijgesneden wordt */
+    width: 100%;
+    object-position: top;
+    /* houdt de bovenkant vast */
+}
+
+
+/*--------------------------------------------*/
+/*Extra Styling*/
+.underline {
+    text-decoration: underline;
+}
+
+article {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+/*-----*/
+/*figcaption op foto 'ongs'*/
+.effect {
+    position: relative;
+}
+
+figcaption {
+    position: absolute;
+    top: 15px;
+    left: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+}
+
+/*-----*/
+/*Plaats tussen cards artiesten*/
+div.card {
+    margin: 15px;
+}
+
+
+/*Audio*/
+.audio-container {
+    border: 0.5px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    border-radius: 8px;
+    margin-top: 15px;
+    font-size: 10px;
+    width: 100%;
+    max-width: 210px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.play-button {
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 20px;
+    background: #000;
+}
+
+
+.song-title {
+    flex: 1;
+    font-weight: bold;
+    color: white;
+    font-size: 18px;
+}
+
+/*Table*/
+.nav-link:hover {
+    color: #f20405 !important;
+    text-decoration: none;
+}
+
+
+/* Basis styling */
+table {
+    width: 100%;
+    max-width: 85%;
+    border-collapse: collapse;
+    background-color: #1e1e1e;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+th,
+td {
+    padding: 15px;
+    border: 1px solid #444;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+th {
+    background-color: #913228;
+    color: white;
+}
+
+tr:hover {
+    background-color: #333;
+}
+
+a {
+    color: red;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Small screens: Zet tabel om naar 2 kolommen */
+@media screen and (max-width: 768px) {
+
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+
+    thead {
+        display: none;
+        /* Verberg kop */
+    }
+
+    table {
+        margin: 30px auto;
+        border: none;
+        box-shadow: none;
+        width: 100%;
+        max-width: 90%;
+    }
+
+    tr {
+        display: flex;
+        flex-direction: column;
+        background-color: #121212;
+        border-radius: 12px;
+        border: 1px solid #333;
+        padding: 15px;
+        margin-bottom: 20px;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.08);
+    }
+
+    tr:hover {
+        background-color: #1c1c1c;
+    }
+
+    td {
+        padding: 10px 0;
+        font-size: 15px;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px dashed #444;
+    }
+
+    td:last-child {
+        border-bottom: none;
+    }
+
+    td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #f2f2f2;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+        letter-spacing: 0.5px;
+    }
+
+    .start-time {
+        font-style: italic;
+        color: #bbb;
+        font-size: 14px;
+        display: block;
+        margin-top: 3px;
+    }
+
+    ul.event-list {
+        padding-left: 18px;
+        margin-top: 6px;
+    }
+
+    ul.event-list li {
+        list-style-type: disc;
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    a {
+        word-break: break-word;
+    }
+}
+
+
+
+/* Op grote schermen (vanaf 1024px) zet de navbar in een grid */
+@media screen and (min-width: 1024px) {
+    .navbar-nav {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        /* 5 kolommen */
+        gap: 20px;
+        justify-items: center;
+        /* Items worden gecentreerd in hun grid-cellen */
+        width: 100%;
+    }
+
+    .nav-link {
+        padding: 10px 20px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        transition: color 0.3s ease, transform 0.2s ease;
+    }
+
+    .nav-link:hover {
+        color: #913228;
+        transform: scale(1.1);
+        /* Zoom-in effect bij hover */
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+
+    th,
+    td {
+        font-size: 1.1rem;
+        padding: 20px 25px;
+    }
+
+    th:nth-child(1),
+    td:nth-child(1) {
+        width: 22%;
+    }
+
+    th:nth-child(2),
+    td:nth-child(2) {
+        width: 50%;
+    }
+
+    th:nth-child(3),
+    td:nth-child(3) {
+        width: 25%;
+    }
+
+    th:nth-child(4),
+    td:nth-child(4) {
+        width: 15%;
+    }
+}
