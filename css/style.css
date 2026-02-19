@@ -146,6 +146,14 @@ div.card {
     transform: translateY(0);
 }
 
+.marketing {
+    transition: transform 0.3s ease;
+}
+
+.marketing:hover {
+    transform: scale(1.1);
+}
+
 
 /*Table*/
 .nav-link:hover {
