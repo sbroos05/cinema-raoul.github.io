@@ -103,9 +103,53 @@ div.card {
     font-size: 18px;
 }
 
+.navbar-nav .nav-link {
+    color: white !important;
+    transition: color 0.3s ease-in-out;
+}
+
+/* 1. Ikke → lichtgeel */
+.navbar-nav .nav-link:nth-of-type(1):hover {
+    color: #fff7a1 !important;
+}
+
+/* 2. Efkes veurstelle → donkergeel */
+.navbar-nav .nav-link:nth-of-type(2):hover {
+    color: #ffd500 !important;
+}
+
+/* 3. Muziek → licht oranje */
+.navbar-nav .nav-link:nth-of-type(3):hover {
+    color: #ffb347 !important;
+}
+
+/* 4. Foto's → donker oranje */
+.navbar-nav .nav-link:nth-of-type(4):hover {
+    color: #ff7a00 !important;
+}
+
+/* 5. Contact → rood */
+.navbar-nav .nav-link:nth-of-type(5):hover {
+    color: #ff5c5c !important;
+}
+
+/* Startpositie: onzichtbaar + iets naar beneden */
+.fly-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease-out;
+}
+
+/* Wanneer zichtbaar in viewport */
+.fly-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
 /*Table*/
 .nav-link:hover {
-    color: #f20405 !important;
+    color: orange !important;
     text-decoration: none;
 }
 
